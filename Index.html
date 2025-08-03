@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neon Text Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <input type="text" id="inputText" placeholder="اكتب اسمك هنا" />
 
+    <!-- كلا الزرين بنفس الشكل -->
+    <button class="fancy-btn" onclick="generateText()">عرض</button>
+    <button class="fancy-btn" onclick="downloadImage()">تحميل كصورة</button>
+    
+    <div id="capture">
+      <div id="outputText" class="neon-text">hello</div>
+    </div>
+  </div>
+
+  <!-- مكتبة html2canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
