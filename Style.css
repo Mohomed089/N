@@ -1,1 +1,100 @@
+body {
+  margin: 0;
+  background-color: #000;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
+.container {
+  text-align: center;
+  color: white;
+}
+
+input {
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.fancy-btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  color: white;
+  background: linear-gradient(45deg, #ff0057, #ff7a00);
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  margin: 10px 5px;
+  transition: 0.3s ease;
+}
+
+.fancy-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 180deg, #ff0057, #ff7a00, #ff0057);
+  animation: rotate 4s linear infinite;
+  z-index: -1;
+}
+
+.fancy-btn::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background-color: #000;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.neon-text {
+  margin-top: 20px;
+  font-size: 70px;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #00c3ff,
+    #ff0066,
+    #ffcc00,
+    #00ffcc,
+    #cc00ff
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: neon 4s linear infinite;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes neon {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
